@@ -4,6 +4,6 @@ class Show < ActiveRecord::Base
   end
 
   def self.most_popular_show
-    Show.find.maximum(:rating)
+    Show.where(:rating == 10)
   end
 end
